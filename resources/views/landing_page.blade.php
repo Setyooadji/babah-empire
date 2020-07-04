@@ -14,28 +14,7 @@
     </div>
 </section>
 <!--================End Home Banner Area =================-->
-<!--================About  Area =================-->
-<!-- <section class="about-area area-padding">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 d-none d-lg-block">
-                <div class="about-img responsive">
-                    <img src="{{ URL::asset('images/banner/about3.png') }}" alt="" data-aos="fade-right">
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="about-content" data-aos="fade-left">
-                    <h4>PT. ANUGERAH PRATAMA LAZUARDI
-                        MEMBANTU ANDA MENEMUKAN
-                        RUMAH IMPIAN</h4>
-                    <p>Kami hadir untuk membantu anda yang menginginkan rumah <br> impian sejak tahun 2013, dan telah menyelesaikan 10 proyek <br> dengan tetap menjaga kualitas dan kepuasan konsumen. Dapatkan <br> rumah impian anda bersama Anugerah Pratama Lazuardi dengan <br> cara menghubungi marketing kami.</p>
-                    <a class="main_btn page-scroll" href="#portfolio">proyek berjalan</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!--================About Area End =================-->
+
 
 <!--================Service  Area =================-->
 <section class="service-area area-padding">
@@ -142,13 +121,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="filters portfolio-filter">
-            <ul>
-                <li class="active" data-filter="*">all</li>
-                <li data-filter=".following">PROYEK BERJALAN</li>
-                <li data-filter=".upcoming">SOLD OUT</li>
-            </ul>
-        </div>
+
         <div class="filters-content">
             <div class="row portfolio-grid">
                 <div class="grid-sizer col-md-3 col-lg-6"></div>
@@ -165,38 +138,9 @@
                         <h4><a href="project/infogpac1">GRIYA PRATAMA ASRI CILEUNYI TAHAP 1</a></h4>                            
                     </div>
                 </div>
-            </div>
-                <div class="col-lg-6 col-md-6 all following">
-                <div class="single_portfolio">
-                    <img class="img-fluid w-100" src="{{ URL::asset('images/project/gpaac2.jpg') }}" alt="">
-                    <div class="centered">
-                        <center>
-                            <h3>GRIYA PRATAMA ASRI</h3><br><h3>CILEUNYI TAHAP 2</h3>
-                        </center>
-                    </div>
-                    <div class="short_info">
-                        <p>construction</p>
-                        <h4><a href="project/infogpac2">GRIYA PRATAMA ASRI CILEUNYI TAHAP 2</a></h4>                            
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 all  following">
-                <div class="single_portfolio">
-                    <img class="{{ URL::asset('images/project/par/par1.png') }}" alt="">
-                    <div class="centered">
-                        <center>
-                            <h3>PRATAMA ASRI</h3><br><h3>RESIDENCE 2</h3>
-                        </center>
-                    </div>
-                    <div class="short_info">
-                        <p>construction</p>
-                        <h4><a href="project/infopar2">PRATAMA ASRI RESIDENCE 2</a></h4>                            
-                    </div>
-                </div>
-            </div>
-            </div>
+            </div>  
         </div>
-    </div>
+
     </div>
 </section>
 
