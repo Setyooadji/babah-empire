@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ URL::asset('vendors/animate-css/animate.css') }}">
     <!-- main css -->
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/stylecard.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/responsive.css') }}">
     <script type="text/javascript">
         $(document).ready(function() {
@@ -55,7 +56,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{ URL('/home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ URL('/') }}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ URL('/about') }}">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ URL('/services') }}">services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ URL('/project') }}">project</a></li>

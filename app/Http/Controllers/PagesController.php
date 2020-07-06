@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\pages;
+use App\Marketing;
+use App\Proyek;
+use App\Tipe;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -15,7 +18,10 @@ class PagesController extends Controller
    
     public function home()
     {
-        return view('landing_page');
+        $marketing = Marketing::all();
+        $proyek = Proyek::all();
+        $tipe = Tipe::all();
+        return view('landing_page', compact('marketing','proyek','tipe'));
     }
     public function index()
     {

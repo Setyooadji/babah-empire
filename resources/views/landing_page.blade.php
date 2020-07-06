@@ -119,28 +119,19 @@
         <div class="area-heading">
             <h3 class="line">Project</h3>
         </div>
-    </div>
-    <div class="container">
-
-        <div class="filters-content">
-            <div class="row portfolio-grid">
-                <div class="grid-sizer col-md-3 col-lg-6"></div>
-                <div class="col-lg-6 col-md-6 all  upcoming">
-                <div class="single_portfolio">
-                    <img class="img-fluid w-100" src="{{ URL::asset('images/project/gpaac1.jpg') }}" alt="">
-                    <div class="centered">
-                        <center>
-                            <h3>GRIYA PRATAMA ASRI</h3><br><h3>CILEUNYI TAHAP 1</h3>
-                        </center>
+        <div class="card-grid col-6">
+            @foreach($proyek as $p)
+                <a class="card" href="#">
+                <div class="card__background" style="background-image: url( {{ url('/data_file/'.$p->file) }} )">
                     </div>
-                    <div class="short_info">
-                        <p>construction</p>
-                        <h4><a href="project/infogpac1">GRIYA PRATAMA ASRI CILEUNYI TAHAP 1</a></h4>                            
+                    <div class="card__content">
+                        <p class="card__category">Project</p>
+                        <h3 class="card__heading">{{$p->nama_proyek}}</h3>
+                        <p class="card__category">{{$p->alamat_proyek}}</p>
                     </div>
-                </div>
-            </div>  
+                </a>
+            @endforeach
         </div>
-
     </div>
 </section>
 
@@ -150,86 +141,25 @@
 <section class="testimonial-area area-padding">
     <div class="container">
         <div class="area-heading">
-            <h3 class="line">Marketing</h3>
-    
+            <h3 class="line">Marketing</h3>   
         </div>
         <div class="row">
             <div class="active-testimonial-carusel owl-carousel">
+                @foreach($marketing as $m)
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="{{ URL::asset('images/elements/rsz.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ url('/data_file/'.$m->file) }}" alt="">
                     </div>
                     <div class="desc">
-                        <h4>Dhani Widya Purnamasari</h4>
-                        <p class="designation">Supervisor Marketing</p>
+                        <h4>{{$m->nama_marketing}}</h4>
+                        <p class="designation">{{$m->jabatan}}</p>
+                        <p class="designation">{{$m->email_marketing}}</p>
                         <p>
-                            0813 2057 9890
+                            {{$m->notlp_marketing}}
                         </p>
                     </div>
                 </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ URL::asset('images/elements/rsz5.jpg') }}" alt="">
-                    </div>
-                    <div class="desc">
-                        <h4>Ully Yuliana</h4>
-                        <p class="designation">senior marketing</p>
-                        <p>
-                            0813 9522 5847
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ URL::asset('images/elements/sae.jpg') }}" alt="">
-                    </div>
-                    <div class="desc">
-                        <h4>A. Syaefulloh</h4>
-                        <p class="designation">marketing</p>
-                        <p>
-                            0821 2055 9951
-                        </p>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ URL::asset('images/elements/rsz-1.jpg') }}" alt="">
-                    </div>
-                    <div class="desc">
-                        <h4>Ujang Kusdianto</h4>
-                        <p class="designation">marketing</p>
-                        <p>
-                            0813 2277 8509
-                        </p>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ URL::asset('images/elements/iwan.jpg') }}" alt="">
-                    </div>
-                    <div class="desc">
-                        <h4>Iwan Setiawan</h4>
-                        <p class="designation">Marketing</p>
-                        <p>
-                            0821 2992 4958
-                        </p>
-                    </div>
-                </div>
-
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="{{ URL::asset('images/elements/riki1.jpg') }}" alt="">
-                    </div>
-                    <div class="desc">
-                        <h4>Riki Hardiansyah</h4>
-                        <p class="designation">Marketing</p>
-                        <p>
-                            0823 1838 2322
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
