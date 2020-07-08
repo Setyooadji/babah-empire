@@ -21,7 +21,7 @@ class PagesController extends Controller
         $marketing = Marketing::all();
         $proyek = Proyek::all();
         $tipe = Tipe::all();
-        return view('landing_page', compact('marketing','proyek','tipe'));
+        return view('beranda', compact('marketing','proyek','tipe'));
     }
     public function index()
     {

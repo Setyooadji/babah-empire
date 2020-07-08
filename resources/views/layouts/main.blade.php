@@ -1,160 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="{{ URL::asset('images/logo.jpg') }}">
-    <title>Anugerah Pratama Lazuardi</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('vendors/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('vendors/owl-carousel/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('vendors/animate-css/animate.css') }}">
-    <!-- main css -->
-    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/stylecard.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/responsive.css') }}">
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#navbarSupportedContent").on("click", "li", function() {
-                $(this).addClass(" active").siblings().removeClass(" active");
-            })
-        })
-    </script>
-    <title>Anugerah Pratama Lazuardi</title>
+	<title>Anugerah Pratama Lazuardi</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+
+	<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+
+	<link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/stylecard.css') }}">
+
 </head>
 
+<body>
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="{{ url('/proyek') }}">Anugerah Pratama Lazuardi</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
 
-<!--================ Navbar =================-->
-<header class="header_area">
-    <div class="top_menu row m0">
-        <div class="container">
-            <div class="text-center">
-                <a class="dn_btn" href=""><i class="ti-mobile"></i>022 7833916</a>
-                <a class="dn_btn" href="https://www.google.co.id/maps/place/Jl.+Sukup+Baru+No.20,+Pasir+Endah,+Kec.+Ujung+Berung,+Kota+Bandung,+Jawa+Barat+40619/@-6.9116075,107.6907347,18.75z/data=!4m5!3m4!1s0x2e68dd47138f3305:0x6f66f8f3bec48fc3!8m2!3d-6.9113781!4d107.6908735?hl=id&authuser=0" target="_blank"> <i class="ti-location-pin"></i> Sukup Baru 20,Bandung,Indonesia</a>
-                <a class="dn_btn" href="https://www.instagram.com/anugerahpratamalazuard/" target="_blank"><i class="ti-instagram"></i>anugerahpratamalazuard</a>
-            </div>
-        </div>
-    </div>
-    <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container">
-                <a class="navbar-brand" href="{{ URL('/login') }}">
-                    <img src="{{ URL::asset('images/logo.jpg') }}" alt="Logo" style="width:40px; margin-right:10px;"> 
-                </a>
-                <a class="navbar-brand"> Anugerah Pratama Lazuardi</a>
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="index.html"><img src="" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{ URL('/') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ URL('/about') }}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ URL('/services') }}">services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ URL('/project') }}">project</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ URL('/contact') }}">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Beranda</a></li>
+					<li class="nav-item"><a href="agent.html" class="nav-link">Marketing</a></li>
+					<li class="nav-item"><a href="properties.html" class="nav-link">Properti</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link">Kontak</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 <!-- end navbar -->
 <!-- isi page -->
-@yield('container')
+@yield('content')
+
 <!-- end isi page -->
 <!-- footer -->
-<footer class="footer-area ">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4  col-md-6">
-                <div class="single-footer-widget">
-                    <h6>Tentang Kami</h6>
-                    <div class="row">
-                        <p>Kami hadir untuk membantu anda yang menginginkan rumah impian sejak tahun 2013 dan telah menyelesaikan 10 proyek dengan menjaga kualitas dan kepuasan konsumen</p>
-                        <a href="{{ URL('/about')}}" style="color:inherit;">Selengkapnya >></a>
-                        <!-- <div class="col-lg-6">
-                            <ul class="footer-nav">
-                                <li><i class="ti-angle-right"></i>
-                                    <a href="{{ URL('/home') }}">Home</a>
-                                </li>
-                                <li><i class="ti-angle-right"></i>
-                                    <a href="{{ URL('/about') }}">About us</a>
-                                </li>
-                                <li><i class="ti-angle-right"></i>
-                                    <a href="{{ URL('/services') }}">Service</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="footer-nav">
-                                <li><i class="ti-angle-right"></i>
-                                    <a href="{{ URL('/project') }}">Project</a>
-                                </li>
-                                
-                                <li><i class="ti-angle-right"></i>
-                                    <a href="{{ URL('/contact') }}">Contact</a>
-                                </li>
-                            </ul>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4  col-md-6">
-                <div class="single-footer-widget mail-chimp">
-                    <h6 class="mb-20">Business Hours</h6>
-                    <ul class="business-hour">
-                        <li>Senin - Jumat : <span>9:00 am - 18:00 pm</span> </li>
-                        <li>Sabtu :<span>9:00 am - 16:00 pm</span></li>
-                        <li>Minggu :<span>Closed</span></li>
-                    </ul>               
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</footer>
-<!-- end footer -->
 
-<script src="{{ URL::asset('js/jquery-2.2.4.min.js') }}"></script>
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-4">
+					<div class="ftco-footer-widget mb-5">
+						<h2 class="ftco-heading-2">Anugerah Pratama Lazuadi</h2>
+							<ul lass="list-unstyled" style="list-style-type: none;">
+								<li><a href="https://www.google.co.id/maps/place/Jl.+Sukup+Baru+No.20,+Pasir+Endah,+Kec.+Ujung+Berung,+Kota+Bandung,+Jawa+Barat+40619/@-6.9116075,107.6907347,18.75z/data=!4m5!3m4!1s0x2e68dd47138f3305:0x6f66f8f3bec48fc3!8m2!3d-6.9113781!4d107.6908735?hl=id&" target="_blank"><span class="icon fa fa-map mr-2"></span><span class="text">Sukup Baru 20,Bandung, Indonesia</span></li>
+								
+                                <li><a><span class="icon fa fa-phone mr-2" disabled></span><span class="text">022 7833916</span></a></li>
 
-<script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ URL::asset('js/stellar.js') }}"></script>
-<script src="{{ URL::asset('vendors/isotope/imagesloaded.pkgd.min.js') }}"></script>
-<script src="{{ URL::asset('vendors/isotope/isotope.pkgd.min.js') }}"></script>
-<script src="{{ URL::asset('vendors/owl-carousel/owl.carousel.min.js') }}"></script>
-<script src="{{ URL::asset('js/jquery.ajaxchimp.min.js') }}"></script>
-<script src="{{ URL::asset('js/jquery.counterup.min.js') }}"></script>
-<script src="{{ URL::asset('js/waypoints.min.js') }}"></script>
-<script src="{{ URL::asset('js/mail-script.js') }}"></script>
-<script src="{{ URL::asset('js/contact.js') }}"></script>
-<script src="{{ URL::asset('js/jquery.form.js') }}"></script>
-<script src="{{ URL::asset('js/jquery.validate.min.js') }}"></script>
-<script src="{{ URL::asset('js/mail-script.js') }}"></script>
-<script src="{{ URL::asset('js/theme.js') }}"></script>
-<script>
-    $('.page-scroll').on('click', function(e) {
-        var tujuan = $(this).attr('href');
-        var elemen = $(tujuan);
-        $('html , body').animate({
-            scrollTop: elemen.offset().top
-        });
-        e.preventDefault();
-    });
-</script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+								<li><a href="https://www.instagram.com/anugerahpratamalazuard/" target="_blank"><span class="icon fa fa-instagram mr-2"></span><span
+											class="text">anugerahpratamalazuard</span></a></li>
+							</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="ftco-footer-widget mb-4 ml-md-4">
+						<h2 class="ftco-heading-2">Jam Kerja</h2>
+						<ul class="list-unstyled">
+							<li><a><span class="fa fa-chevron-right mr-2"></span>Senin - Jumat : 9.00 am - 18.00 pm</span></a></li>
+							<li><a><span class="fa fa-chevron-right mr-2"></span>Sabtu : 9.00 am - 16.00 pm</a></li>
+							<li><a><span class="fa fa-chevron-right mr-2"></span>Minggu : Libur</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
 
-<script>
-    AOS.init({
-        duration: 800,
-    });
-</script>
+					<p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;<script>
+							document.write(new Date().getFullYear());
+						</script> All rights reserved | This template is made with <i class="fa fa-heart"
+							aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" /></svg></div>
+
+
+	<script src="{{ asset('js/jquery.min.js') }}"></script>
+	<script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
+	<script src="{{ asset('js/popper.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+	<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+	<script src="{{ asset('js/scrollax.min.js') }}"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
+	</script>
+	<script src="{{ asset('js/google-map.js') }}"></script>
+	<script src="{{ asset('js/main.js') }}"></script>
+
+</body>
+
+</html>
