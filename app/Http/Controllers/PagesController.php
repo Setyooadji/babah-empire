@@ -23,6 +23,23 @@ class PagesController extends Controller
         $tipe = Tipe::all();
         return view('beranda', compact('marketing','proyek','tipe'));
     }
+    public function marketing()
+    {
+        $marketing = Marketing::all();
+        return view('marketing', compact('marketing'));
+    }
+    public function properti()
+    {
+        $tipe = Tipe::all();
+        $proyek = Proyek::all();
+        return view('properti', compact('tipe','proyek'));
+    }
+    public function kontak()
+    {
+        $tipe = Tipe::all();
+        $proyek = Proyek::all();
+        return view('kontak', compact('tipe','proyek'));
+    }
     public function index()
     {
         //

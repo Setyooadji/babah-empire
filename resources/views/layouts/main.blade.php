@@ -37,9 +37,9 @@
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Beranda</a></li>
-					<li class="nav-item"><a href="agent.html" class="nav-link">Marketing</a></li>
-					<li class="nav-item"><a href="properties.html" class="nav-link">Properti</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link">Kontak</a></li>
+					<li class="nav-item"><a href="{{ url('/mkt') }}" class="nav-link">Marketing</a></li>
+					<li class="nav-item"><a href="{{ url('/prt')}}" class="nav-link">Properti</a></li>
+					<li class="nav-item"><a href="{{ url('/ktk')}}" class="nav-link">Kontak</a></li>
 				</ul>
 			</div>
 		</div>

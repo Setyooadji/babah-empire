@@ -148,7 +148,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
 					<span class="subheading">Tipe Rumah</span>
-					<h2 class="mb-2">Property Unggulan</h2>
+					<h2 class="mb-2">Properti Unggulan</h2>
 				</div>
 			</div>
 			<div class="row ftco-animate">

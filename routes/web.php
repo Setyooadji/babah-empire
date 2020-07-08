@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 // pages
 Route::get('/','PagesController@home');
+Route::get('/mkt','PagesController@marketing');
+Route::get('/prt','PagesController@properti');
+Route::get('/ktk','PagesController@kontak');
 
 //  admin
 Route::get('/proyek','ProyekController@index');
