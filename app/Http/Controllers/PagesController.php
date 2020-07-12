@@ -15,7 +15,6 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   
     public function home()
     {
         $marketing = Marketing::all();
@@ -39,6 +38,19 @@ class PagesController extends Controller
         $tipe = Tipe::all();
         $proyek = Proyek::all();
         return view('kontak', compact('tipe','proyek'));
+    }
+    public function mkt_info(Marketing $marketing)
+    {
+        return view('marketing_info', compact('marketing'));
+    }
+    public function pyk_info(proyek $proyek)
+    {
+        $tipe = Tipe::all();
+        return view('proyek_info', compact('proyek','tipe'));
+    }
+    public function prt_info(Tipe $tipe)
+    {
+        return view('properti_info', compact('tipe'));
     }
     public function index()
     {

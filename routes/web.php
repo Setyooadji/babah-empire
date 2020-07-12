@@ -22,6 +22,9 @@ Route::get('/','PagesController@home');
 Route::get('/mkt','PagesController@marketing');
 Route::get('/prt','PagesController@properti');
 Route::get('/ktk','PagesController@kontak');
+Route::get('/mkt/{marketing}','PagesController@mkt_info');
+Route::get('/pyk/{proyek}', 'PagesController@pyk_info');
+Route::get('/prt/{tipe}', 'PagesController@prt_info');
 
 //  admin
 Route::get('/proyek','ProyekController@index');

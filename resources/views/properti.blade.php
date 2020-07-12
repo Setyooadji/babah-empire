@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
 		<div class="col-md-9 ftco-animate pb-0 text-center">
-			<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Beranda <i class="fa fa-chevron-right"></i></a></span> <span>Properti <i class="fa fa-chevron-right"></i></span></p>
+			<p class="breadcrumbs"><span class="mr-2"><a href="{{ url('/') }}">Beranda <i class="fa fa-chevron-right"></i></a></span> <span>Properti <i class="fa fa-chevron-right"></i></span></p>
 			<h1 class="mb-3 bread">Properti</h1>
 		</div>
 		</div>
@@ -24,7 +24,7 @@
 			@foreach($tipe as $t)
 			<div class="col-md-4">
 				<div class="property-wrap ftco-animate">
-					<a href="properties-single.html" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
+					<a href="{{ url('/prt/'.$t->tipe_id) }}" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
 					</a>
 					<div class="text">
 						<ul class="property_list">
