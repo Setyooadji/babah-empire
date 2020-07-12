@@ -53,6 +53,9 @@
                                 <a href="{{ url('/home')}}" class="nav-link">Beranda</a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ url('/promo')}}" class="nav-link">Promo</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ url('/proyek')}}" class="nav-link">Proyek</a>
                             </li>
                             <li class="nav-item">
@@ -60,6 +63,9 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('marketing') }}" class="nav-link">Marketing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('pemesanan') }}" class="nav-link">Pemesanan</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

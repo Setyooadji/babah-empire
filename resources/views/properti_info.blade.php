@@ -46,25 +46,25 @@
                         </p> 
                     </div>
                         <div class="col-md-3">
-                            <p><i class="fa fa-bed" aria-hidden="true" style="color:#FD4500"></i> <span style="color:#FD4500">Kamar</span>  <br> {{$tipe->kamar}}</p>
+                            <p><i class="fa fa-bed" aria-hidden="true" style="color:#FD4500"></i> <span style="">Kamar</span>  <br> {{$tipe->kamar}}</p>
                         </div>
                         <div class="col-md-3">
-                            <p><i class="fa fa-bath" aria-hidden="true" style="color:#FD4500"></i> <span style="color:#FD4500">Kamar mandi</span> <br> {{$tipe->kamar_mandi}}</p>
+                            <p><i class="fa fa-bath" aria-hidden="true" style="color:#FD4500"></i> <span style="">Kamar mandi</span> <br> {{$tipe->kamar_mandi}}</p>
                         </div>
                         <div class="col-md-3">
-                            <p><i class="fa fa-users" aria-hidden="true" style="color:#FD4500"></i> <span style="color:#FD4500">Ruang keluarga</span> <br> {{$tipe->ruang_keluarga}}</p>
+                            <p><i class="fa fa-users" aria-hidden="true" style="color:#FD4500"></i> <span style="">Ruang keluarga</span> <br> {{$tipe->ruang_keluarga}}</p>
                         </div>
                         <div class="col-md-3">
-                            <p><i class="fa fa-users" aria-hidden="true" style="color:#FD4500"></i> <span style="color:#FD4500">Dapur</span> <br> {{$tipe->dapur}}</p>
+                            <p><i class="fa fa-users" aria-hidden="true" style="color:#FD4500"></i> <span style="">Dapur</span> <br> {{$tipe->dapur}}</p>
                         </div>
                         <div class="col-md-3">
-                            <p><i class="fa fa-car" aria-hidden="true" style="color:#FD4500"></i> <span style="color:#FD4500">Garasi</span> <br> {{$tipe->garasi}}</p>
+                            <p><i class="fa fa-car" aria-hidden="true" style="color:#FD4500"></i> <span style="">Garasi</span> <br> {{$tipe->garasi}}</p>
                         </div>
                         <div class="col-md-3">
-                            <p><i class="fa fa-shower" aria-hidden="true" style="color:#FD4500"></i> <span style="color:#FD4500">Laundry room</span> <br> {{$tipe->gudang}}</p>
+                            <p><i class="fa fa-shower" aria-hidden="true" style="color:#FD4500"></i> <span style="">Laundry room</span> <br> {{$tipe->gudang}}</p>
                         </div>
             </div>                          
-                <div class="justify-content-center">
+                <div class="row justify-content-center">
                     <a href="{{ url('/ktk') }}" class="btn py-3 px-4" style="background-color: #FD4500;color:white;">Hubungi Sekarang</a>
                 </div>
             </div>

@@ -17,22 +17,68 @@
   <div class="container">
     <div class="row block-9 justify-content-center mb-5">
       <div class="col-md-8 mb-md-5">
-        <h2 class="text-center">If you got any questions <br>please do not hesitate to send us a message</h2>
-        <form action="#" class="bg-light p-5 contact-form">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Form Pemesanan</span>
+            <h2 class="mb-3">Daftar Sekarang</h2>
+          </div>
+        </div>
+        @if (session('status'))
+          <div class="alert alert-success">
+              {{ session('status') }}
+          </div>
+        @endif
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+            {{ $error }} <br/>
+            @endforeach
+        </div>
+        @endif
+        <form action="/ktk/proses" method="post" enctype="multipart/form-data" class="bg-light p-5 contact-form">
+          @csrf
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
+              <label for="nama">Nama Lengkap</label><br>
+              <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="Masukkan Nama Lengkap" value="{{ old('nama')}}">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Email">
+              <label for="email">Email</label><br>
+              <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan Email" value="{{ old('email')}}">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
+              <label for="no_hp">No. Handphone</label><br>
+              <input type="text" name="no_hp" class="form-control @error('no_hp') is-invalid @enderror" placeholder="Masukkan No. Hanphome" value="{{ old('no_hp')}}">
           </div>
           <div class="form-group">
-            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              <label for="alamat">Alamat</label><br>
+              <input type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror" placeholder="Masukkan Alamat" value="{{ old('alamat')}}">
           </div>
           <div class="form-group">
-            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              <label for="ttl">Tempat Tanggal Lahir</label><br>
+              <input type="text" name="ttl" class="form-control @error('ttl') is-invalid @enderror" placeholder="Tempat, Hari/Tanggal/Tahun" value="{{ old('ttl')}}">
+          </div>
+          <div class="form-group">
+              <label for="no_ktp">No. KTP</label><br>
+              <input type="text" name="no_ktp" class="form-control @error('no_ktp') is-invalid @enderror" placeholder="Masukkan No. KTP" value="{{ old('no_ktp')}}">
+          </div>
+          <div class="form-group">
+              <label for="proyek">Pilih Proyek </label><br>
+              <select name="proyek" id="proyek" class="form-control"value="{{ old('proyek')}}">
+                  @foreach($proyek as $p)
+                  <option value="{{$p->nama_proyek}}">{{$p->nama_proyek}}</option>
+                  @endforeach
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="tipe">Pilih Tipe Rumah </label><br>
+              <select name="tipe" id="tipe" class="form-control"value="{{ old('tipe')}}">
+                  @foreach($tipe as $t)
+                  <option value="{{$t->nama_tipe}}">{{$t->nama_tipe}}</option>
+                  @endforeach
+              </select>
+          </div>
+          <div class="row justify-content-center">
+            <input type="submit" value="Daftar Sekarang" class="btn btn-primary">
           </div>
         </form>
       

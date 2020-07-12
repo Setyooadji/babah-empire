@@ -45,7 +45,7 @@
                                 <input type="text" class="form-control" value="{{$marketing->notlp_marketing}}" disabled>
                             </div>
                         </form>
-                        <div class="justify-content-center">
+                        <div class="row justify-content-center">
                             <a href="{{ url('/ktk') }}" class="btn py-3 px-4" style="background-color: #FD4500;color:white;">Hubungi Sekarang</a>
                         </div>
                     </div>

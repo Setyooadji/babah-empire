@@ -48,7 +48,7 @@
         @if($proyek->proyek_id === $t->proyek_id)
         <div class="col-md-4">
             <div class="property-wrap ftco-animate">
-                <a href="properties-single.html" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
+                <a href="{{ url('/prt/'.$t->tipe_id)}}" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
                 </a>
                 <div class="text">
                     <ul class="property_list">

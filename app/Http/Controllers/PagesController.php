@@ -6,6 +6,8 @@ use App\pages;
 use App\Marketing;
 use App\Proyek;
 use App\Tipe;
+use App\Promo;
+use App\Pemesanan;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -20,7 +22,9 @@ class PagesController extends Controller
         $marketing = Marketing::all();
         $proyek = Proyek::all();
         $tipe = Tipe::all();
-        return view('beranda', compact('marketing','proyek','tipe'));
+        $promo = Promo::all();
+        $pemesanan = Pemesanan::all();
+        return view('beranda', compact('marketing','proyek','tipe','promo'));
     }
     public function marketing()
     {
@@ -64,7 +68,12 @@ class PagesController extends Controller
      */
     public function create()
     {
-        //
+        $marketing = Marketing::all();
+        $proyek = Proyek::all();
+        $tipe = Tipe::all();
+        $promo = Promo::all();
+        $pemesanan = Pemesanan::all();
+        return view('kontak', compact('proyek','tipe','promo','marketing','pemesanan'));
     }
 
     /**
@@ -75,8 +84,20 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'no_hp' => 'required',
+            'alamat' => 'required',
+            'ttl' => 'required',
+            'no_ktp' => 'required',
+            'proyek' => 'required',
+            'tipe' => 'required',
+        ]);
+        Pemesanan::create($request->all());
+        return redirect('ktk')->with('status','Pendaftaran Berhasil!');
     }
+    
 
     /**
      * Display the specified resource.

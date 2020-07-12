@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/stylecard.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/stylepromo.css') }}">
 	<link rel="shortcut icon" href="{{ asset('images/logo.jpg') }}">
 
 </head>
@@ -29,7 +30,7 @@
 	<!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{{ url('/proyek') }}">Anugerah Pratama Lazuardi</a>
+			<a class="navbar-brand" href="{{ url('/home') }}">Anugerah Pratama Lazuardi</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
