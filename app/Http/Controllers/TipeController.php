@@ -32,7 +32,6 @@ class TipeController extends Controller
 		$this->validate($request, [
 			'file' => 'required|file|image|mimes:jpeg,png,jpg',
             'denah' => 'required|file|image|mimes:jpeg,png,jpg',
-            'denah2' => 'required|file|image|mimes:jpeg,png,jpg',
             'nama_tipe' => 'required',
             'deskripsi_tipe' => 'required',
             'lantai' => 'required',
