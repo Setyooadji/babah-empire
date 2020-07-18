@@ -49,6 +49,7 @@ class ProyekController extends Controller
 			'nama_proyek' => $request->nama_proyek,
 			'alamat_proyek' => $request->alamat_proyek,
 			'deskripsi_proyek' => $request->deskripsi_proyek,
+			'youtube' => $request->youtube,
 		]);
 
 		return redirect('proyek')->with('status','Proyek Berhasil Ditambahkan!');
@@ -111,6 +112,7 @@ class ProyekController extends Controller
 			'nama_proyek' => 'required',
 			'alamat_proyek' => 'required',
 			'deskripsi_proyek' => 'required',
+		
         ]);
         $file = $request->file('file');
 
@@ -124,6 +126,8 @@ class ProyekController extends Controller
             'nama_proyek' => $request->nama_proyek,
             'alamat_proyek' => $request->alamat_proyek,
             'deskripsi_proyek' => $request->deskripsi_proyek,
+            'youtube' => $request->youtube,
+            
         ]);
         return redirect('proyek')->with('status','Proyek Berhasil Diedit!');
     }

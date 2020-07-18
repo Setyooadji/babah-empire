@@ -14598,6 +14598,16 @@ textarea.form-control {
     }
 }
 
+.col.custom-col-7 {
+    flex: 0 0 auto;
+    width: calc(100%/7);
+}
+
+
+.boxie {
+    background: red;
+    width: 300px;
+}
 
 
 @keyframes loader-dash {

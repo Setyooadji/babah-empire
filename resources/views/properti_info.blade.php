@@ -71,4 +71,54 @@
         </div>
     </div>
 </section>
+<section class="ftco-section goto-here">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Detail</span>
+                <h2 class="mb-2">Denah Properti</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="cardi col-md-3" style="width:200px">
+                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->denah) }}" alt="Card image cap">
+            </div>
+            <div class="cardi col-md-3" style="width:200px">
+                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->denah2) }}" alt="Card image cap">
+            </div>
+
+        </div>
+
+        
+            
+
+    </div>
+</section>
+<section class="ftco-section goto-here">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Progress</span>
+                <h2 class="mb-2">Progress Pembangunan</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="cardi col-md-2" style="width:200px">
+                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->file) }}" alt="Card image cap">
+            </div>
+            <div class="cardi col-md-2" style="width:200px">
+                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->file) }}" alt="Card image cap">
+            </div>
+            <div class="cardi col-md-2" style="width:200px">
+                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->file) }}" alt="Card image cap">
+            </div>
+        </div>
+
+        
+            
+
+    </div>
+</section>
 @endsection

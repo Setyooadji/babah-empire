@@ -31,6 +31,10 @@
                         <label for="deskripsi_proyek">Deskripsi Proyek</label><br>
                         <input type="text" name="deskripsi_proyek" class="form-control @error('deskripsi_proyek') is-invalid @enderror" placeholder="Masukkan Deskripsi Proyek" value="{{ old('deskripsi_proyek')}}">
                     </div>
+                    <div class="form-group">
+                        <label for="deskripsi_proyek">Link video youtube</label><br>
+                        <input type="text" name="youtube" class="form-control @error('youtube') is-invalid @enderror" placeholder="Masukkan link video" value="{{ old('youtube')}}">
+                    </div>
                     <input type="submit" value="Tambahkan" class="btn btn-primary">
                     <a href="{{ url('/proyek') }}" class="btn btn-secondary">Kembali</a>
                 </form>

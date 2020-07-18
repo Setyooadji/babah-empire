@@ -52,7 +52,7 @@
 				</div>
 				<div class="col-md-3 d-flex align-items-stretch ftco-animate">
 					<div class="media block-6 services services-bg services-lighten d-block text-center px-4 py-5"
-						style=" background-color: #EA6C3D;">
+					style="background-color: #FA7341;">
 						<div class="icon d-flex justify-content-center align-items-center"><span
 								class="flaticon-stats"></span></div>
 						<div class="media-body py-md-4">
@@ -177,11 +177,92 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12 text-center heading-section heading-section-white ftco-animate">
-					<span class="subheading">Booking</span>
-					<h2 class="mb-3">Cara Booking</h2>
+					<span class="subheading">Kredit Pemilikan Rumah</span>
+					<h2 class="mb-3">Proses KPR</h2>
 				</div>
 			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-3  ftco-animate" >
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center"><span
+								class="fa fa-handshake-o"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">1.Booking</h8>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3  ftco-animate">
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center"><span
+								class="fa fa-file"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">2.Pemberkasan</h8>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3  ftco-animate">
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center"><span
+								class="fa fa-university"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">3.Proses Bank</h8>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3  ftco-animate">
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center"><span
+								class="fa fa-check-square-o"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">4.Persetujuan Bank</h8>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-3  ftco-animate" style="padding-top:20px">
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center" ><span
+								class="fa fa-money"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">5.Pelunasan biaya ALL IN</h8>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3  ftco-animate" style="padding-top:20px">
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center"><span
+								class="fa fa-credit-card"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">6.Akad Kredit</h8>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3  ftco-animate" style="padding-top:20px">
+					<div class="media services  services-lighten d-block text-center px-4 py-4"
+						>
+						<div class="icon d-flex justify-content-center align-items-center"><span
+								class="fa fa-home"></span></div>
+						<div class="media-body py-md-1">
+							<h8 style="color:white">7.Pembangunan Unit</h8>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				
+			</div>
+				
+				
+				
 		</div>
+
 	</section>
 	<!-- end cara pesan -->
 	<!-- marketing -->
@@ -223,5 +304,6 @@
 			</div>
 		</div>
 	</section>
+	
 	<!-- end marketing -->
 

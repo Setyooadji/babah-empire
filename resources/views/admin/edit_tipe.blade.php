@@ -104,7 +104,7 @@
                     </div>
                 
                 <input type="submit" value="Edit Proyek" class="btn btn-info"> 
-                <a href="{{url()->previous()}}" class="btn btn-secondary">Kembali</a>
+                <a href="{{url()->previous()}}" class="btn btn-secondary">Kembalii</a>
                 
             </form>
         </div>
@@ -112,6 +112,30 @@
             <img src="{{ URL::asset('/images/edit_tipe.svg')}}" alt="" width="100%",height="100%">
         </div>
     </div>
+</div>
+<!-- <div class="container">
+<form action="{{ url('/proyek/tipe_rumah/'.$tipe->tipe_id)}}" method="post" enctype="multipart/form-data">
+    @method('patch')
+    @csrf
+    <h2>Tambah Denah</h2>
+    <div class="form-group">
+        <label for="gambar_proyek">Gambar Denah</label><br>
+        <input type="file" name="denah" value="{{$tipe->denah}}">
+    </div>
+    <input type="submit" value="Update denah" class="btn btn-info"> 
+</form>
 </div> 
+<div class="container">
+<form action="{{ url('/proyek/tipe_rumah/'.$tipe->tipe_id)}}" method="post" enctype="multipart/form-data">
+    @method('patch')
+    @csrf
+    <h2>Tambah Progress</h2>
+    <div class="form-group">
+        <label for="gambar_proyek">Gambar Progress</label><br>
+        <input type="file" name="progress" value="{{$tipe->progress}}">
+    </div>
+    <input type="submit" value="Update progress" class="btn btn-info"> 
+</form>
+</div>  -->
 </body>
 @endsection

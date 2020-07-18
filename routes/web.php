@@ -67,6 +67,8 @@ Route::patch('/proyek/{proyek}','ProyekController@update');
 // edit tipe rumah
 Route::get('/proyek/tipe_rumah/{tipe}/edit','TipeController@edit');
 Route::patch('/proyek/tipe_rumah/{tipe}','TipeController@update');
+// Route::patch('/proyek/tipe_rumah/{tipe}','TipeController@updatedenah');
+// Route::patch('/proyek/tipe_rumah/{tipe}','TipeController@updateprogress');
 // edit marketing
 Route::patch('/marketing/{marketing}','MarketingController@update');
 // edit marketing
