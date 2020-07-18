@@ -15,6 +15,7 @@
                     <h5 class="card-title">{{ $proyek->nama_proyek}}</h5>
                     <p class="card-text">{{ $proyek->deskripsi_proyek}}</p>
                     <p class="card-text"><small class="text-muted">{{ $proyek->alamat_proyek}}</small></p>
+                    <p class="card-text"><small class="text-muted">{{ $proyek->youtube}}</small></p>
                     <a href="/proyek/{{$proyek->proyek_id}}/edit" class="btn btn-info">Edit Proyek</a>
                     <form action="/proyek/{{$proyek->proyek_id}}" method="post" class="d-inline">
                         @method('delete')

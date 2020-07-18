@@ -38,29 +38,49 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Content</span>
+                <h2 class="mb-2">Project Video</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$proyek->youtube}}" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section goto-here">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
                 <span class="subheading">Tipe Rumah</span>
                 <h2 class="mb-2">Properti Unggulan</h2>
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        @foreach($tipe as $t)
-        @if($proyek->proyek_id === $t->proyek_id)
-        <div class="col-md-4">
-            <div class="property-wrap ftco-animate">
-                <a href="{{ url('/prt/'.$t->tipe_id)}}" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
-                </a>
-                <div class="text">
-                    <ul class="property_list">
-                        <li><span class="flaticon-floor-plan"></span>{{$t->deskripsi_tipe}}</li>
-                    </ul>
-                    <h3><a href="#">{{$t->nama_tipe}}</a></h3>
-                    <span class="location">{{$proyek->nama_proyek}}</span>
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach($tipe as $t)
+            @if($proyek->proyek_id === $t->proyek_id)
+            <div class="col-md-4">
+                <div class="property-wrap ftco-animate">
+                    <a href="{{ url('/prt/'.$t->tipe_id)}}" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
+                    </a>
+                    <div class="text">
+                        <ul class="property_list">
+                            <li><span class="flaticon-floor-plan"></span>{{$t->deskripsi_tipe}}</li>
+                        </ul>
+                        <h3><a href="#">{{$t->nama_tipe}}</a></h3>
+                        <span class="location">{{$proyek->nama_proyek}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
         @endforeach
+        </div>
+    </div>
+    
     </div>
 </section>
 @endsection

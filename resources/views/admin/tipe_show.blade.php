@@ -29,6 +29,14 @@
                     <input type="file" name="file" value="{{$tipe->file}}">
                 </div>
                 <div class="form-group">
+                        <label for="gambar_tipe">Gambar Denah 1</label><br>
+                        <input type="file" name="denah">
+                    </div>
+                    <div class="form-group">
+                        <label for="gambar_tipe">Gambar Denah 2</label><br>
+                        <input type="file" name="denah2">
+                    </div>
+                <div class="form-group">
                         <label for="nama_tipe">Nama Tipe Rumah</label><br>
                         <input type="text" name="nama_tipe" class="form-control @error('nama_tipe') is-invalid @enderror" placeholder="Masukkan nama tipe rumah" value="{{ $tipe->nama_tipe}}">
                     </div>

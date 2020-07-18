@@ -20,6 +20,14 @@
                         <input type="file" name="file">
                     </div>
                     <div class="form-group">
+                        <label for="gambar_tipe">Gambar Denah 1</label><br>
+                        <input type="file" name="denah">
+                    </div>
+                    <div class="form-group">
+                        <label for="gambar_tipe">Gambar Denah 2</label><br>
+                        <input type="file" name="denah2">
+                    </div>
+                    <div class="form-group">
                         <label for="proyek_id">Nama Proyek</label><br>
                         <select name="proyek_id" id="proyek_id" class="form-control"value="{{ old('proyek_id')}}">
                             @foreach($proyek as $p)

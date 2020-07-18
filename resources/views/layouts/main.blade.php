@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="{{ asset('css/stylepromo.css') }}">
 	<link rel="shortcut icon" href="{{ asset('images/logo.jpg') }}">
 
+
+	
+
 </head>
 
 <body>
@@ -91,7 +94,7 @@
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 				stroke="#F96D00" /></svg></div>
 
-
+	
 	<script src="{{ asset('js/jquery.min.js') }}"></script>
 	<script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
 	<script src="{{ asset('js/popper.min.js') }}"></script>
