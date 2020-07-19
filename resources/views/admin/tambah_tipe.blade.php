@@ -20,14 +20,6 @@
                         <input type="file" name="file">
                     </div>
                     <div class="form-group">
-                        <label for="gambar_tipe">Gambar Denah 1</label><br>
-                        <input type="file" name="denah">
-                    </div>
-                    <div class="form-group">
-                        <label for="gambar_tipe">Gambar Denah 2</label><br>
-                        <input type="file" name="denah2">
-                    </div>
-                    <div class="form-group">
                         <label for="proyek_id">Nama Proyek</label><br>
                         <select name="proyek_id" id="proyek_id" class="form-control"value="{{ old('proyek_id')}}">
                             @foreach($proyek as $p)
@@ -41,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label for="deskripsi_tipe">Deskripsi Tipe</label><br>
-                        <input type="text" name="deskripsi_tipe" class="form-control @error('deskripsi_tipe') is-invalid @enderror" placeholder="Masukkan deskripsi tipe rumah" value="{{ old('deskripsi_tipe')}}">
+                        <textarea type="text" name="deskripsi_tipe" class="form-control @error('deskripsi_tipe') is-invalid @enderror" placeholder="Masukkan deskripsi tipe rumah">{{ old('deskripsi_tipe')}}</textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-3">

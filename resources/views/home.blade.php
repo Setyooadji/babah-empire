@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <a href="{{ url('/marketing')}}" style="text-decoration:none;">Kelola Marketing</a>
+                        <a href="{{ url('/proyek/tipe_rumah')}}" style="text-decoration:none;">Kelola Tipe Rumah</a>
                     </h2>
                     </div>
                 </div>
@@ -45,11 +45,30 @@
                 <div class="card">
                     <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <a href="{{ url('/proyek/tipe_rumah')}}" style="text-decoration:none;">Kelola Tipe Rumah</a>
+                        <a href="{{ url('/denah')}}" style="text-decoration:none;">Tambah Denah Rumah</a>
                     </h2>
                     </div>
                 </div>
             </div>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <a href="{{ url('/progress')}}" style="text-decoration:none;">Tambah Foto Progress Rumah</a>
+                    </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <a href="{{ url('/marketing')}}" style="text-decoration:none;">Kelola Marketing</a>
+                    </h2>
+                    </div>
+                </div>
+            </div>
+            
             <div class="accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">

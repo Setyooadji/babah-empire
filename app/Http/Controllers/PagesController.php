@@ -8,6 +8,8 @@ use App\Proyek;
 use App\Tipe;
 use App\Promo;
 use App\Pemesanan;
+use App\Denah;
+use App\Progress;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -54,7 +56,9 @@ class PagesController extends Controller
     }
     public function prt_info(Tipe $tipe)
     {
-        return view('properti_info', compact('tipe'));
+        $denah = Denah::all();
+        $progress = Progress::all();
+        return view('properti_info', compact('tipe','denah','progress'));
     }
     public function index()
     {

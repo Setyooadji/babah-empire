@@ -27,13 +27,13 @@
 					<a href="{{ url('/prt/'.$t->tipe_id) }}" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
 					</a>
 					<div class="text">
-						<ul class="property_list">
+						<ul class="property_list" style="text-align:justify">
 							<li><span class="flaticon-floor-plan"></span>{{$t->deskripsi_tipe}}</li>
 						</ul>
-						<h3><a href="#">{{$t->nama_tipe}}</a></h3>
+						<h3>Tipe {{$t->nama_tipe}}</></h3>
 						@foreach($proyek as $p)
 						@if($p->proyek_id === $t->proyek_id)
-						<span class="location">{{$p->nama_proyek}}</span>
+						<span class="location">Proyek {{$p->nama_proyek}}</span>
 						@endif
 						@endforeach
 					</div>

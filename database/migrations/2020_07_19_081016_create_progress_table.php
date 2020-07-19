@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProyeksTable extends Migration
+class CreateProgressTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateProyeksTable extends Migration
      */
     public function up()
     {
-        Schema::create('proyeks', function (Blueprint $table) {
-            $table->bigIncrements('proyek_id');
+        Schema::create('progress', function (Blueprint $table) {
+            $table->bigIncrements('progress_id');
+            $table->unsignedBigInteger('tipe_id');
             $table->string('file',10000);
-            $table->string('nama_proyek',100)->unique();
-            $table->string('alamat_proyek');
-            $table->string('deskripsi_proyek',1000);
             $table->timestamps();
+            
+            $table->foreign('tipe_id')->references('tipe_id')->on('tipe')->onDelete('cascade');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateProyeksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proyeks');
+        Schema::dropIfExists('progress');
     }
 }

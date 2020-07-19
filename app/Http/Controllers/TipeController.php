@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Tipe;
 use App\Proyek;
+use App\Denah;
+use App\Progress;
 use Illuminate\Http\Request;
 
 class TipeController extends Controller
@@ -21,7 +23,9 @@ class TipeController extends Controller
     {
         $tipe = Tipe::all();
         $proyek = Proyek::get();
-        return view('admin.tipe_rumah', compact('tipe','proyek'));
+        $denah = Denah::get();
+        $progress = Progress::get();
+        return view('admin.tipe_rumah', compact('tipe','proyek','denah','progress'));
     }
     public function upload(){
         $tipe = Tipe::get();
@@ -31,7 +35,6 @@ class TipeController extends Controller
 	public function proses_upload(Request $request){
 		$this->validate($request, [
 			'file' => 'required|file|image|mimes:jpeg,png,jpg',
-            'denah' => 'required|file|image|mimes:jpeg,png,jpg',
             'nama_tipe' => 'required',
             'deskripsi_tipe' => 'required',
             'lantai' => 'required',
@@ -45,21 +48,13 @@ class TipeController extends Controller
 
 		// menyimpan data file yang diupload ke variabel $file
 		$file = $request->file('file');
-		$denah = $request->file('denah');
-		$denah2 = $request->file('denah2');
 		$nama_file = time()."_".$file->getClientOriginalName();
-		$nama_file2 = time()."_".$denah->getClientOriginalName();
-		$nama_file3 = time()."_".$denah2->getClientOriginalName();
       	// isi dengan nama folder tempat kemana file diupload
 		$tujuan_upload = 'data_file';
         $file->move($tujuan_upload,$nama_file);
-        $denah->move($tujuan_upload,$nama_file2);
-        $denah2->move($tujuan_upload,$nama_file3);
         $proyek = Proyek::all();
 		Tipe::create([
             'file' => $nama_file,
-            'denah' => $nama_file2,
-            'denah2' => $nama_file3,
             'proyek_id' => $request->proyek_id,
 			'nama_tipe' => $request->nama_tipe,
 			'deskripsi_tipe' => $request->deskripsi_tipe,
@@ -104,7 +99,9 @@ class TipeController extends Controller
     public function show(Tipe $tipe)
     {
         $proyek = Proyek::all();
-        return view('admin.tipe_show',compact('proyek','tipe'));
+        $denah = Denah::get();
+        $progress = Progress::get();
+        return view('admin.tipe_show',compact('proyek','tipe','denah','progress'));
     }
 
     /**
@@ -133,7 +130,6 @@ class TipeController extends Controller
 			'deskripsi_tipe' => 'required',
 			'lantai' => 'required',
 			'kamar' => 'required',
-			'denah' => 'required',
 			'kamar_mandi' => 'required',
 			'ruang_keluarga' => 'required',
 			'dapur' => 'required',
@@ -146,22 +142,6 @@ class TipeController extends Controller
       	 // isi dengan nama folder tempat kemana file diupload
 		$tujuan_upload = 'data_file';
         $file->move($tujuan_upload,$nama_file);
-        // denah 1
-        $request->validate([
-            'denah' => 'required',
-        ]);
-        $denah = $request->file('denah');
-		$nama_file2 = time()."_".$denah->getClientOriginalName();
-      	// isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = 'data_file';
-        $denah->move($tujuan_upload,$nama_file2);
-        // denah 2
-        $denah2 = $request->file('denah2');
-		$nama_file3 = time()."_".$denah2->getClientOriginalName();
-      	// isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = 'data_file';
-        $denah2->move($tujuan_upload,$nama_file3);
-
 
         Tipe::where('tipe_id',$tipe->tipe_id)->update([
             'file' => $nama_file,
@@ -169,8 +149,6 @@ class TipeController extends Controller
             'deskripsi_tipe' => $request->deskripsi_tipe,
             'lantai' => $request->lantai,
             'kamar' => $request->kamar,
-            'denah' => $request->nama_file2,
-            'denah2' => $request->nama_file3,
             'kamar_mandi' => $request->kamar_mandi,
             'ruang_keluarga' => $request->ruang_keluarga,
             'dapur' => $request->dapur,

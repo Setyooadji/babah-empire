@@ -64,6 +64,12 @@
                                 <a href="{{ url('proyek/tipe_rumah') }}" class="nav-link">Tipe Rumah</a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ url('denah') }}" class="nav-link">Denah Rumah</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('progress') }}" class="nav-link">Progress Rumah</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ url('marketing') }}" class="nav-link">Marketing</a>
                             </li>
                             <li class="nav-item">

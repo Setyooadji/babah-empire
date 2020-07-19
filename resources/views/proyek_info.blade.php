@@ -27,7 +27,7 @@
             <div class="col-md-6">
                 <img src="{{ url('/images/pyk_info.svg') }}" alt="" widht="65%" height="65%">
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6 " style="text-align:justify">
                 <p class="mt-5">{{$proyek->deskripsi_proyek}}</p>
             </div>
         </div>

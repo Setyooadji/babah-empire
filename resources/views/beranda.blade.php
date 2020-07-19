@@ -11,8 +11,7 @@
 						<h1 class="mb-3" style="font-size: 3.5rem;">Temukan Hunian Nyaman <span>Anda bersama Anugerah
 								Pratama
 								Lazuardi</span></h1>
-						<p><a href="#" class="btn py-3 px-4" style="background-color: #FD4500;color:white;">View all
-								properties</a>
+						<p><a href="{{ url('/prt') }}" class="btn py-3 px-4" style="background-color: #FD4500;color:white;">Lihat Semua Properti</a>
 						</p>
 					</div>
 				</div>
@@ -128,13 +127,13 @@
 								<a href="{{ url('/prt/'.$t->tipe_id)}}" class="img" style="background-image: url( {{ url('/data_file/'.$t->file) }} );">
 								</a>
 								<div class="text">
-									<ul class="property_list">
+									<ul class="property_list" style="text-align:justify">
 										<li>{{$t->deskripsi_tipe}}</li>
 									</ul>
-									<h3>{{ $t->nama_tipe }}</h3>
+									<h3>Tipe {{ $t->nama_tipe }}</h3>
 									@foreach($proyek as $p)
 									@if($p->proyek_id === $t->proyek_id)
-									<span class="location">{{$p->nama_proyek}}</span>
+									<span class="location">Proyek {{$p->nama_proyek}}</span>
 									@endif
 									@endforeach
 								</div>
@@ -148,7 +147,7 @@
 	</section>
 	<!-- end tipe rumah -->
 	<!-- project -->
-	<section class="ftco-section ftco-no-pt">
+	<section class="ftco-section ftco-no-pt" id="proyek">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12 heading-section text-center ftco-animate mb-5">

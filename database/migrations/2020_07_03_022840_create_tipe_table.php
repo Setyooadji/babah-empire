@@ -18,7 +18,7 @@ class CreateTipeTable extends Migration
             $table->unsignedBigInteger('proyek_id');
             $table->string('file',10000);
             $table->string('nama_tipe',100);
-            $table->string('deskripsi_tipe');
+            $table->string('deskripsi_tipe',1000);
             $table->integer('lantai');
             $table->integer('kamar');
             $table->integer('kamar_mandi');

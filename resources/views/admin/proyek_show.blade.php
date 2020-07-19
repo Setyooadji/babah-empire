@@ -11,7 +11,7 @@
             <h3>Detail Proyek</h3>
             <div class="card border rounded-lg" style="width: 18rem;">
                 <img src="{{ url ('/data_file/'.$proyek->file) }}" class="card-img-top img-fluid img-thumbnail" alt="...">
-                <div class="card-body">
+                <div class="card-body" style="text-align:justify">
                     <h5 class="card-title">{{ $proyek->nama_proyek}}</h5>
                     <p class="card-text">{{ $proyek->deskripsi_proyek}}</p>
                     <p class="card-text"><small class="text-muted">{{ $proyek->alamat_proyek}}</small></p>
@@ -31,12 +31,12 @@
                 <div class="card-group">
                     @foreach($tipe as $t)
                     @if($t->proyek_id === $proyek->proyek_id)
-                    <div class="col-4">
+                    <div class="col-5">
                         <div class="card">
                             <img src="{{ url('/data_file/'.$t->file)}}" class="card-img-top img-fluid img-thumbnail" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">{{$t->nama_tipe}}</h5>
-                            <p class="card-text">{{$t->deskripsi_tipe}}</p>
+                            <div class="card-body"style="text-align:justify">
+                                <h5 class="card-title">{{$t->nama_tipe}}</h5>
+                                <p class="card-text">{{$t->deskripsi_tipe}}</p>
                             </div>
                             <div class="card-footer">
                             <a href="/proyek/tipe_rumah/{{$t->tipe_id}}/edit"class="btn btn-outline-info ">Edit</a>

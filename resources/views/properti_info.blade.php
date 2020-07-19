@@ -35,16 +35,18 @@
             <!-- <form> -->
             
             <div class="row">
-                    <div class="col-md-12" > 
-                        <p style="font-size:30px">
-                            <b style="text-transform:uppercase">{{$tipe->nama_tipe}}</b>
-                        </p> 
-                    </div>
-                    <div class="col-md-12" > 
-                        <p style="font-size:12px">
-                            {{$tipe->deskripsi_tipe}}
-                        </p> 
-                    </div>
+                <div class="col-md-12" > 
+                    <p style="font-size:30px">
+                        <b style="text-transform:uppercase">{{$tipe->nama_tipe}}</b>
+                    </p> 
+                </div>
+                <div class="col-md-12" > 
+                    <p style="font-size:12px">
+                        {{$tipe->deskripsi_tipe}}
+                    </p> 
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
                         <div class="col-md-3">
                             <p><i class="fa fa-bed" aria-hidden="true" style="color:#FD4500"></i> <span style="">Kamar</span>  <br> {{$tipe->kamar}}</p>
                         </div>
@@ -63,6 +65,8 @@
                         <div class="col-md-3">
                             <p><i class="fa fa-shower" aria-hidden="true" style="color:#FD4500"></i> <span style="">Laundry room</span> <br> {{$tipe->gudang}}</p>
                         </div>
+                    </div>
+                </div>
             </div>                          
                 <div class="row justify-content-center">
                     <a href="{{ url('/ktk') }}" class="btn py-3 px-4" style="background-color: #FD4500;color:white;">Hubungi Sekarang</a>
@@ -81,13 +85,13 @@
         </div>
 
         <div class="row justify-content-center">
+            @foreach($denah as $d)
+            @if($tipe->tipe_id === $d->tipe_id)
             <div class="cardi col-md-3" style="width:200px">
-                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->denah) }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ url('/data_file/'.$d->file) }}" alt="Card image cap">
             </div>
-            <div class="cardi col-md-3" style="width:200px">
-                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->denah2) }}" alt="Card image cap">
-            </div>
-
+            @endif
+            @endforeach
         </div>
 
         
@@ -103,22 +107,15 @@
                 <h2 class="mb-2">Progress Pembangunan</h2>
             </div>
         </div>
-
         <div class="row justify-content-center">
+            @foreach($progress as $pg)
+            @if($tipe->tipe_id === $pg->tipe_id)
             <div class="cardi col-md-2" style="width:200px">
-                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->file) }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ url('/data_file/'.$pg->file) }}" alt="Card image cap">
             </div>
-            <div class="cardi col-md-2" style="width:200px">
-                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->file) }}" alt="Card image cap">
-            </div>
-            <div class="cardi col-md-2" style="width:200px">
-                <img class="card-img-top" src="{{ url('/data_file/'.$tipe->file) }}" alt="Card image cap">
-            </div>
+            @endif
+            @endforeach
         </div>
-
-        
-            
-
     </div>
 </section>
 @endsection

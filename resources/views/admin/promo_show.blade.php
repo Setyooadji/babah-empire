@@ -6,9 +6,9 @@
         <div class="col-md-4 my-5">
             <div class="card text-center my-3" style="width: 18rem;">
                 <img src="{{ url('/data_file/'.$promo->file)}}" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body" >
                     <h5 class="card-title">{{$promo->nama_promo}}</h5>
-                    <p class="card-text">{{$promo->deskripsi_promo}}</p>
+                    <p class="card-text" >{{$promo->deskripsi_promo}}</p>
                     <form action="/promo/{{$promo->id}}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi_promo">Deskripsi Promo</label><br>
-                    <textarea type="text" name="deskripsi_promo" class="form-control @error('deskripsi_promo') is-invalid @enderror" placeholder="Masukkan Deskripsi Promo" value="{{ $promo->deskripsi_promo}}"></textarea>
+                    <textarea type="text" name="deskripsi_promo" class="form-control @error('deskripsi_promo') is-invalid @enderror" placeholder="Masukkan Deskripsi Promo">{{ $promo->deskripsi_promo}}</textarea>
                 </div>
                 
                 <input type="submit" value="Edit Promo" class="btn btn-info"> 

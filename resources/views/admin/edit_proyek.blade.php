@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi_proyek">Deskripsi Proyek</label><br>
-                    <input type="text" name="deskripsi_proyek" class="form-control @error('deskripsi_proyek') is-invalid @enderror" placeholder="Masukkan Deskripsi Proyek" value="{{ $proyek->deskripsi_proyek}}">
+                    <textarea type="text" name="deskripsi_proyek" class="form-control @error('deskripsi_proyek') is-invalid @enderror" placeholder="Masukkan Deskripsi Proyek">{{ $proyek->deskripsi_proyek}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="alamat_proyek">link video</label><br>
