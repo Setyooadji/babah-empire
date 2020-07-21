@@ -55,8 +55,8 @@ Route::post('/marketing/tambah_marketing/proses','MarketingController@proses_upl
 Route::get('/proyek/{proyek}','ProyekController@show');
 // show promo spesifik
 Route::get('/promo/{promo}','PromoController@show');
-// show pemesanan spesifik
-Route::get('/pemesanan/{pemesanan}','PemesananController@show');
+// // show pemesanan spesifik
+// Route::get('/pemesanan/{pemesanan}','PemesananController@show');
 // show tipe rumah spesifik
 Route::get('/proyek/tipe_rumah/{tipe}','TipeController@show');
 // show marketing spesifik

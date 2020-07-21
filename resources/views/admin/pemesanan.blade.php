@@ -8,17 +8,58 @@
             {{ session('status') }}
         </div>
     @endif
-    <div class="row mt-5">
-        <div class="col-md-6">
-            <img src="{{ URL::asset('/images/pemesanan.svg') }}" alt="" width=100% height=100%>
-        </div>
-        <div class="col-md-6">
-            <div class="list-group ">
+    <!-- <input class="form-control" id="myInput" type="text" placeholder="Search.."> -->
+    <div style="overflow-x:auto">
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Email</th>
+                <th scope="col">No. Hp</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">Tempat, Tanggal Lahir</th>
+                <th scope="col">No. KTP</th>
+                <th scope="col">Proyek</th>
+                <th scope="col">Tipe</th>
+                <th scope="col">Tanggal Pemesanan</th>
+                <th scope="col">Hapus</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
                 @foreach($pemesanan as $p)
-                <a href="{{ url('/pemesanan/'.$p->id)}}" class="list-group-item list-group-item-action ">{{$p->nama}}</a>
+                <tr>
+                    <td>{{$p->id}}</td>
+                    <td>{{$p->nama}}</td>
+                    <td>{{$p->email}}</td>
+                    <td>{{$p->no_hp}}</td>
+                    <td>{{$p->alamat}}</td>
+                    <td>{{$p->ttl}}</td>
+                    <td>{{$p->no_ktp}}</td>
+                    <td>{{$p->proyek}}</td>
+                    <td>{{$p->tipe}}</td>
+                    <td>{{$p->created_at}}</td>
+                    <td>
+                        <form action="{{ url('/pemesanan/'.$p->id)}}" method="post" enctype="multipart/form-data">
+                            @method('delete')
+                            @csrf
+                            <input type="submit" value="Hapus" class="btn btn-danger"> 
+                        </form>
+                    </td>
+                </tr>
                 @endforeach
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+    });
+</script>
 @endsection
