@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Progress;
 use App\Tipe;
+use App\Proyek;
 use Illuminate\Http\Request;
 
 class ProgressController extends Controller
@@ -23,7 +24,8 @@ class ProgressController extends Controller
     }
     public function upload(){
         $tipe = Tipe::get();
-		return view('admin.progress',['tipe' => $tipe]);
+        $proyek = Proyek::get();
+		return view('admin.progress',['tipe' => $tipe,'proyek' =>$proyek]);
     }
     public function proses_upload(Request $request){
 		$this->validate($request, [
@@ -36,7 +38,8 @@ class ProgressController extends Controller
       	// isi dengan nama folder tempat kemana file diupload
 		$tujuan_upload = 'data_file';
         $file->move($tujuan_upload,$nama_file);
-        $proyek = Tipe::all();
+        $tipe = Tipe::all();
+        $proyek = Proyek::all();
 		Progress::create([
             'file' => $nama_file,
             'tipe_id' => $request->tipe_id,

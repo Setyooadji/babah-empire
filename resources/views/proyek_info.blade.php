@@ -71,8 +71,8 @@
                         <ul class="property_list">
                             <li><span class="flaticon-floor-plan"></span>{{$t->deskripsi_tipe}}</li>
                         </ul>
-                        <h3><a href="#">{{$t->nama_tipe}}</a></h3>
-                        <span class="location">{{$proyek->nama_proyek}}</span>
+                        <h3>Tipe {{$t->nama_tipe}}</></h3>
+                        <span class="location">Proyek {{$proyek->nama_proyek}}</span>
                     </div>
                 </div>
             </div>

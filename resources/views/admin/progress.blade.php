@@ -23,7 +23,7 @@
                     <label for="tipe_id">Nama Tipe Rumah</label><br>
                     <select name="tipe_id" id="tipe_id" class="form-control"value="{{ old('tipe_id')}}">
                         @foreach($tipe as $t)
-                        <option value="{{$t->tipe_id}}">{{$t->nama_tipe}}</option>
+                        <option value="{{$t->tipe_id}}">Tipe {{$t->nama_tipe}} - Proyek @foreach($proyek as $p) @if($p->proyek_id === $t->proyek_id){{$p->nama_proyek}}@endif @endforeach</option>
                         @endforeach
                     </select>
                 </div>
